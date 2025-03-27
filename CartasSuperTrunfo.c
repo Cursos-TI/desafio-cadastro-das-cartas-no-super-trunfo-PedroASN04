@@ -1,22 +1,48 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+int main() { 
+    // Declarando variáveis
+    char Estado;
+    char Codigo[4];
+    char Cidade[20];
+    int Populacao;
+    float Area;
+    float PIB;
+    int Turistico;
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    // Inserção dos dados requisitados
+    printf("Insira a letra do estado:\n");
+    scanf(" %c", &Estado); // Adicionado espaço antes de %c para evitar problemas com buffer
+
+    printf("Insira o código do estado(ex: A01):\n");
+    scanf("%s", Codigo);
+
+    printf("Insira o nome da cidade sem espaço:\n");
+    scanf("%s", Cidade);
+
+    printf("Insira a quantidade da população: \n");
+    scanf("%d", &Populacao);
+
+    printf("Insira a extensão da área da sua cidade: \n");
+    scanf("%f", &Area);
+
+    printf("Insira o PIB da sua cidade: \n");
+    scanf("%f", &PIB);
+
+    printf("Insira a quantidade de pontos turísticos: \n");
+    scanf("%d", &Turistico);
+
+    // Impressão dos dados inseridos
+    printf(
+        "\nEstado: %c\n"
+        "Código: %s\n"
+        "Nome da cidade: %s\n"
+        "População: %d\n"
+        "Área: %.2f\n"
+        "PIB: %.2f\n bilhões de reais"
+        "Número de Pontos Turísticos: %d\n", 
+        Estado, Codigo, Cidade, Populacao, Area, PIB, Turistico
+    );
 
     return 0;
 }
